@@ -1,0 +1,23 @@
+
+name: 'Release JIRA Version'
+description: 'Release the version on Jira, and create the next one.'
+author: miroslav.vasilev
+inputs:
+  jira-project-key:
+    description: 'The JIRA project key'
+    required: true
+  jira-username:
+    description: 'The JIRA username to auth with'
+    required: true
+  jira-api-token:
+    description: 'The JIRA API Token to auth with'
+    required: true
+  current-version:
+    description: 'The current project version'
+    required: true
+  next-version:
+    description: 'The next project version'
+    required: true
+runs:
+  using: node20
+  main: 'index.js'
